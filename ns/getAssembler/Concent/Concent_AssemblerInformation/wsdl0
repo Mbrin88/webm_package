@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<wsdl:definitions targetNamespace="http://services.dmg.eu" xmlns:tns="http://services.dmg.eu" xmlns:tns1="http://data.info.cip" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://data.info.cip" xmlns:tns="http://services.dmg.eu" xmlns:tns1="http://data.info.cip" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://services.dmg.eu"/>
+      <complexType name="Assembler">
+        <xsd:annotation>
+          <xsd:documentation>EGL_TYPE cip.info.data.Assembler</xsd:documentation>
+        </xsd:annotation>
+        <sequence>
+        <element name="assemblerCode" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="assemblerName" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="street" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="housenumber" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="suffix" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="zipcode" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="city" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="countryCode" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="privatePhoneNumber" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="mobilePhoneNumber" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="extraMobilePhoneNumber" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="businessPhoneNumber" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="emailAddress" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="emailAddress2" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="company" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="administrationId" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="assemblyQualification" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="serviceQualification" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="measureQualification" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="courierQualification" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="teamleadAssembly" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="teamleadService" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="serviceDepot" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="expireDate" nillable ="false" maxOccurs="1" type="xsd:date"/>
+        <element name="expertises" nillable ="true" maxOccurs="1" type="tns:ExpertiseArray"/>
+        <element name="info" nillable ="true" maxOccurs="1" type="tns:ExpertiseInfoArray"/>
+        </sequence>
+      </complexType>
+    </schema>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://services.dmg.eu" xmlns:tns1="http://data.info.cip" xmlns:tns="http://services.dmg.eu" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://data.info.cip"/>
+      <element name="getAssemblerInformationResponse">
+        <complexType>
+          <sequence>
+          <element name="response" nillable ="false" maxOccurs="1" type="tns:AssemblerResponse"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="faultMessage">
+				<complexType>
+					<sequence>
+						<element name="fault" nillable="true" minOccurs="0" maxOccurs="1" type="tns:Fault"/>
+					</sequence>
+				</complexType>
+			</element>
+      <element name="getAssemblerInformation">
+        <complexType>
+          <sequence>
+          <element name="request" nillable ="false" maxOccurs="1" type="tns:AssemblerRequest"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="ExpertiseInfo">
+        <xsd:annotation>
+          <xsd:documentation>EGL_TYPE cip.info.data.ExpertiseInfo</xsd:documentation>
+        </xsd:annotation>
+        <sequence>
+        <element name="infoText" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="ErrorList">
+        <xsd:annotation>
+          <xsd:documentation>EGL_TYPE cip.info.data.ErrorList</xsd:documentation>
+        </xsd:annotation>
+        <sequence>
+        <element name="error" nillable ="false" maxOccurs="1" type="tns:Message"/>
+        </sequence>
+      </complexType>
+      <complexType name="Message">
+        <xsd:annotation>
+          <xsd:documentation>EGL_TYPE cip.info.data.Message</xsd:documentation>
+        </xsd:annotation>
+        <sequence>
+        <element name="code" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="message" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="severity" nillable ="true" maxOccurs="1" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="AssemblerResponse">
+        <xsd:annotation>
+          <xsd:documentation>EGL_TYPE cip.info.data.AssemblerResponse</xsd:documentation>
+        </xsd:annotation>
+        <sequence>
+        <element name="assembler" nillable ="true" maxOccurs="1" type="tns1:Assembler"/>
+        <element name="fault" nillable ="true" maxOccurs="1" type="tns:Fault"/>
+        </sequence>
+      </complexType>
+      <complexType name="ExpertiseInfoArray">
+            <sequence>
+                  <element name="ExpertiseInfoArray" nillable ="false" maxOccurs="unbounded" type="tns:ExpertiseInfo"/>
+            </sequence>
+      </complexType>
+      <complexType name="FaultDetail">
+        <xsd:annotation>
+          <xsd:documentation>EGL_TYPE cip.info.data.FaultDetail</xsd:documentation>
+        </xsd:annotation>
+        <sequence>
+        <element name="errors" nillable ="true" maxOccurs="1" type="tns:ErrorListArray"/>
+        </sequence>
+      </complexType>
+      <complexType name="AssemblerRequest">
+        <xsd:annotation>
+          <xsd:documentation>EGL_TYPE cip.info.data.AssemblerRequest</xsd:documentation>
+        </xsd:annotation>
+        <sequence>
+        <element name="division" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="assemblerCode" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="languageCode" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="Fault">
+        <xsd:annotation>
+          <xsd:documentation>EGL_TYPE cip.info.data.Fault</xsd:documentation>
+        </xsd:annotation>
+        <sequence>
+        <element name="faultcode" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="faultstring" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="detail" nillable ="false" maxOccurs="1" type="tns:FaultDetail"/>
+        </sequence>
+      </complexType>
+      <complexType name="ErrorListArray">
+            <sequence>
+                  <element name="ErrorListArray" nillable ="false" maxOccurs="unbounded" type="tns:ErrorList"/>
+            </sequence>
+      </complexType>
+      <complexType name="ExpertiseArray">
+            <sequence>
+                  <element name="ExpertiseArray" nillable ="false" maxOccurs="unbounded" type="tns:Expertise"/>
+            </sequence>
+      </complexType>
+      <complexType name="Expertise">
+        <xsd:annotation>
+          <xsd:documentation>EGL_TYPE cip.info.data.Expertise</xsd:documentation>
+        </xsd:annotation>
+        <sequence>
+        <element name="expertiseLabel" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        <element name="expertiseValue" nillable ="false" maxOccurs="1" type="xsd:string"/>
+        </sequence>
+      </complexType>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="getAssemblerInformationRequest">
+    <wsdl:part name="parameters" element="tns:getAssemblerInformation"/>
+  </wsdl:message>
+  <wsdl:message name="getAssemblerInformationResponse">
+    <wsdl:part name="parameters" element="tns:getAssemblerInformationResponse"/>
+  </wsdl:message>
+  <wsdl:message name="faultMessage">
+	<wsdl:part name="soapfault" element="tns:faultMessage"/>
+	</wsdl:message>
+  <wsdl:portType name="AssemblerService">
+    <wsdl:operation name="getAssemblerInformation">
+      <wsdl:documentation>EGL_PARAMETER_ORDER request response </wsdl:documentation>
+      <wsdl:input name="getAssemblerInformationRequest" message="tns:getAssemblerInformationRequest"/>
+      <wsdl:output name="getAssemblerInformationResponse" message="tns:getAssemblerInformationResponse"/>
+      <wsdl:fault name="getAssemblerInformationFault" message="tns:faultMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AssemblerServiceBinding" type="tns:AssemblerService">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getAssemblerInformation">
+      <wsdlsoap:operation soapAction="getAssemblerInformation"/>
+      <wsdl:input name="getAssemblerInformationRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAssemblerInformationResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="getAssemblerInformationFault">
+				<wsdlsoap:fault name="getAssemblerInformationFault" use="literal"/>
+			</wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AssemblerServiceService">
+    <wsdl:port name="AssemblerService" binding="tns:AssemblerServiceBinding">
+      <wsdlsoap:address location="http://localhost:8080/DMG_ExternalServices/services/AssemblerService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

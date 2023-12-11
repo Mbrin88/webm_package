@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FLOW VERSION="3.0" CLEANUP="true">
+
+  <!-- nodes -->
+
+<SEQUENCE TIMEOUT="" EXIT-ON="FAILURE" FORM="TRY">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP NAME="getAssembler_request" TIMEOUT="" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">requestor</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">getAssembler.docs:docTypeRef_ns_requestorKey</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">orderKey</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">getAssembler.docs:docTypeRef_ns_orderKey</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">assemblerCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:getAssemblerInformation</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">request</value>
+            <value name="field_type">recref</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+            <value name="modifiable">true</value>
+            <value name="rec_ref">getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerRequest</value>
+          </record>
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">requestor</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">getAssembler.docs:docTypeRef_ns_requestorKey</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">orderKey</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">getAssembler.docs:docTypeRef_ns_orderKey</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">assemblerCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/assemblerCode;1;0" TO="/tns:getAssemblerInformation;2;0/request;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerRequest/assemblerCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/requestor;4;0;getAssembler.docs:docTypeRef_ns_requestorKey/languageId;4;0;getAssembler.docs:docTypeRef_ns_languageKey/languageCode;1;0" TO="/tns:getAssemblerInformation;2;0/request;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerRequest/languageCode;1;0">
+</MAPCOPY>
+</MAP>
+
+<INVOKE TIMEOUT="" SERVICE="getAssembler.Concent.Concent_AssemblerInformation.services:getAssemblerInformation" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_name">getAssembler.services.Concent_AssemblerInformation_.docTypes:AssemblerService_getAssemblerInformation_Input</value>
+    <value name="field_type">recref</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <value name="modifiable">true</value>
+    <value name="rec_ref">getAssembler.Concent.Concent_AssemblerInformation.docTypes:AssemblerService_getAssemblerInformation_Input</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:getAssemblerInformation</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://services.dmg.eu</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">request</value>
+            <value name="field_type">recref</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">false</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+            <value name="rec_closed">true</value>
+            <value name="modifiable">true</value>
+            <value name="rec_ref">getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerRequest</value>
+          </record>
+        </array>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">requestor</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">getAssembler.docs:docTypeRef_ns_requestorKey</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">orderKey</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">getAssembler.docs:docTypeRef_ns_orderKey</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">assemblerCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:getAssemblerInformation</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">request</value>
+            <value name="field_type">recref</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+            <value name="modifiable">true</value>
+            <value name="rec_ref">getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerRequest</value>
+          </record>
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/tns:getAssemblerInformation;2;0/request;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerRequest/division;1;0" TO="/tns:getAssemblerInformation;2;0/request;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerRequest/division;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformation;2;0/request;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerRequest/assemblerCode;1;0" TO="/tns:getAssemblerInformation;2;0/request;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerRequest/assemblerCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformation;2;0/request;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerRequest/languageCode;1;0" TO="/tns:getAssemblerInformation;2;0/request;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerRequest/languageCode;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+
+<MAP NAME="getAssembler_response" TIMEOUT="" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">requestor</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">getAssembler.docs:docTypeRef_ns_requestorKey</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">orderKey</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">getAssembler.docs:docTypeRef_ns_orderKey</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">assemblerCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:getAssemblerInformation</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:getAssemblerInformationResponse</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://services.dmg.eu</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">Assembler</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">getAssembler.docs:docTypeRef_ns_assemblerKey</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">requestor</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">getAssembler.docs:docTypeRef_ns_requestorKey</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">orderKey</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">getAssembler.docs:docTypeRef_ns_orderKey</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">assemblerCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:getAssemblerInformation</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:getAssemblerInformationResponse</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://services.dmg.eu</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">response</value>
+            <value name="field_type">recref</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">false</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+            <value name="rec_closed">true</value>
+            <value name="modifiable">true</value>
+            <value name="rec_ref">getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse</value>
+          </record>
+        </array>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/assemblerCode;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/assemblerCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/assemblerName;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/assemblerName;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/street;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/street;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/housenumber;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/houseNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/suffix;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/suffix;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/zipcode;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/zipCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/city;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/city;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/countryCode;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/countryCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/privatePhoneNumber;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/privatePhoneNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/mobilePhoneNumber;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/mobilePhoneNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/extraMobilePhoneNumber;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/extraMobilePhoneNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/businessPhoneNumber;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/businessPhoneNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/emailAddress;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/emailAddress;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/emailAddress2;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/emailAddress2;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/company;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/company;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/administrationId;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/administrationId;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/assemblyQualification;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/assemblyQualification;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/serviceQualification;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/serviceQualification;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/measureQualification;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/measureQualification;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/courierQualification;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/courierQualification;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/teamleadAssembly;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/teamleadAssembly;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/teamleadService;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/teamleadService;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/serviceDepot;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/serviceDepot;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/expireDate;1;0" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/expireDate;1;0">
+</MAPCOPY>
+</MAP>
+
+<LOOP TIMEOUT="" IN-ARRAY="/tns:getAssemblerInformationResponse/response/assembler/expertises/ExpertiseArray" OUT-ARRAY="/Assembler/expertises/expertise">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP NAME="expertiseArray" TIMEOUT="" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">requestor</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">getAssembler.docs:docTypeRef_ns_requestorKey</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">orderKey</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">getAssembler.docs:docTypeRef_ns_orderKey</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">assemblerCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:getAssemblerInformation</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:getAssemblerInformationResponse</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://services.dmg.eu</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">Assembler</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">getAssembler.docs:docTypeRef_ns_assemblerKey</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">requestor</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">getAssembler.docs:docTypeRef_ns_requestorKey</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">orderKey</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">getAssembler.docs:docTypeRef_ns_orderKey</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">assemblerCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:getAssemblerInformation</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:getAssemblerInformationResponse</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://services.dmg.eu</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">response</value>
+            <value name="field_type">recref</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">false</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+            <value name="rec_closed">true</value>
+            <value name="modifiable">true</value>
+            <value name="rec_ref">getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse</value>
+          </record>
+        </array>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">Assembler</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">getAssembler.docs:docTypeRef_ns_assemblerKey</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">$iteration</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/tns:getAssemblerInformationResponse;2;0/response;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_AssemblerResponse/assembler;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns1_Assembler/expertises;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_ExpertiseArray/ExpertiseArray;4;0;getAssembler.Concent.Concent_AssemblerInformation.docTypes:docTypeRef_tns_Expertise" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/expertises;4;0;getAssembler.docs:docTypeRef_ns_expertise/expertise;4;0;getAssembler.docs:docTypeRef_ns_expertiseArray">
+</MAPCOPY>
+</MAP>
+</LOOP>
+
+<LOOP TIMEOUT="" IN-ARRAY="/tns:getAssemblerInformationResponse/response/assembler/info/ExpertiseInfoArray" OUT-ARRAY="/Assembler/info/expertiseInfo">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP NAME="expertiseInfoArray" TIMEOUT="" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">requestor</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">getAssembler.docs:docTypeRef_ns_requestorKey</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">orderKey</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">getAssembler.docs:docTypeRef_ns_orderKey</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">assemblerCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:getAssemblerInformation</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:getAssemblerInformationResponse</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://services.dmg.eu</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">Assembler</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">getAssembler.docs:docTypeRef_ns_assemblerKey</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">requestor</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">getAssembler.docs:docTypeRef_ns_requestorKey</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">orderKey</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">getAssembler.docs:docTypeRef_ns_orderKey</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">assemblerCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:getAssemblerInformation</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:getAssemblerInformationResponse</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://services.dmg.eu</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">Assembler</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">getAssembler.docs:docTypeRef_ns_assemblerKey</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">$iteration</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/info;4;0;getAssembler.docs:docTypeRef_ns_expertiseInfo/expertiseInfo;4;0;getAssembler.docs:docTypeRef_ns_expertiseInfoArray" TO="/Assembler;4;0;getAssembler.docs:docTypeRef_ns_assemblerKey/info;4;0;getAssembler.docs:docTypeRef_ns_expertiseInfo/expertiseInfo;4;0;getAssembler.docs:docTypeRef_ns_expertiseInfoArray">
+</MAPCOPY>
+</MAP>
+</LOOP>
+</SEQUENCE>
+
+<SEQUENCE TIMEOUT="" EXIT-ON="FAILURE" FORM="CATCH">
+  <COMMENT></COMMENT>
+</SEQUENCE>
+</FLOW>
